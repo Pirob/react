@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>React</title>
+		<description>A JavaScript library for building user interfaces</description>
+		<link>http://facebook.github.io/react</link>
+		<atom:link href="http://facebook.github.io/react/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>React v0.4.1</title>
+				<description>&lt;p&gt;React v0.4.1 is a small update, mostly containing correctness fixes. Some code has been restructured internally but those changes do not impact any of our public APIs.&lt;/p&gt;
+
+&lt;h2&gt;React&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;setState&lt;/code&gt; callbacks are now executed in the scope of your component.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;click&lt;/code&gt; events now work on Mobile Safari.&lt;/li&gt;
+&lt;li&gt;Prevent a potential error in event handling if &lt;code&gt;Object.prototype&lt;/code&gt; is extended.&lt;/li&gt;
+&lt;li&gt;Don&amp;#39;t set DOM attributes to the string &lt;code&gt;&amp;quot;undefined&amp;quot;&lt;/code&gt; on update when previously defined.&lt;/li&gt;
+&lt;li&gt;Improved support for &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; attributes.&lt;/li&gt;
+&lt;li&gt;Added checksums to detect and correct cases where server-side rendering markup mismatches what React expects client-side.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;JSXTransformer&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improved environment detection so it can be run in a non-browser environment.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/react/downloads.html&quot;&gt;Download it now!&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>2013-07-26T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/07/26/react-v0-4-1.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/07/26/react-v0-4-1.html</guid>
+			</item>
+		
+			<item>
+				<title>Community Round-up #5</title>
+				<description>&lt;p&gt;We launched the &lt;a href=&quot;https://www.facebook.com/react&quot;&gt;React Facebook Page&lt;/a&gt; along with the React v0.4 launch. 700 people already liked it to get updated on the project :)&lt;/p&gt;
+
+&lt;h2&gt;Cross-browser onChange&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://benalpert.com/&quot;&gt;Ben Alpert&lt;/a&gt; from &lt;a href=&quot;https://www.khanacademy.org/&quot;&gt;Khan Academy&lt;/a&gt; worked on a cross-browser implementation of &lt;code&gt;onChange&lt;/code&gt; event that landed in v0.4. He wrote a blog post explaining the various browser quirks he had to deal with.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;First off, what is the input event? If you have an &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt; element and want to receive events whenever the value changes, the most obvious thing to do is to listen to the change event. Unfortunately, change fires only after the text field is defocused, rather than on each keystroke. The next obvious choice is the keyup event, which is triggered whenever a key is released. Unfortunately, keyup doesn&amp;#39;t catch input that doesn&amp;#39;t involve the keyboard (e.g., pasting from the clipboard using the mouse) and only fires once if a key is held down, rather than once per inserted character.&lt;/p&gt;
+
+&lt;p&gt;Both keydown and keypress do fire repeatedly when a key is held down, but both fire immediately before the value changes, so to read the new value you have to defer the handler to the next event loop using &lt;code&gt;setTimeout(fn, 0)&lt;/code&gt; or similar, which slows down your app. Of course, like keyup, neither keydown nor keypress fires for non-keyboard input events, and all three can fire in cases where the value doesn&amp;#39;t change at all (such as when pressing the arrow keys).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://benalpert.com/2013/06/18/a-near-perfect-oninput-shim-for-ie-8-and-9.html&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;React Samples&lt;/h2&gt;
+
+&lt;p&gt;Learning a new library is always easier when you have working examples you can play with. &lt;a href=&quot;https://github.com/jhw&quot;&gt;jwh&lt;/a&gt; put many of them on his &lt;a href=&quot;https://github.com/jhw/react-samples&quot;&gt;react-samples Github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Some simple examples with Facebook&amp;#39;s React framework&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bootstrap action bar, modal and table &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/actionbar.html&quot;&gt;#1&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/bootstrap_actionbar.html&quot;&gt;#2&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/bootstrap_modal.html&quot;&gt;#3&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/bootstrap_striped_table.html&quot;&gt;#4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comments &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/comments1.html&quot;&gt;#1&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/comments2.html&quot;&gt;#2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Data Table &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/datatable.html&quot;&gt;#1&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/datatable2.html&quot;&gt;#2&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/datatable3.html&quot;&gt;#3&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/datatable4.html&quot;&gt;#4&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/datatable5.html&quot;&gt;#5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Filter Bar &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/filterbar.html&quot;&gt;#1&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/filterbar2.html&quot;&gt;#2&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/filterbar3.html&quot;&gt;#3&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/filterbar4.html&quot;&gt;#4&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/filterbar5.html&quot;&gt;#5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fundoo Rating &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/fundoo.html&quot;&gt;#1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Line Char: &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/linechart.html&quot;&gt;#1&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/linechart2.html&quot;&gt;#2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Multi tabs &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/multitabs.html&quot;&gt;#1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/select.html&quot;&gt;#1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simple Tabs &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/simpletabs.html&quot;&gt;#1&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/simpletabs2.html&quot;&gt;#2&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/simpletabs3.html&quot;&gt;#3&lt;/a&gt;,
+&lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/simpletabs4.html&quot;&gt;#4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Toggle &lt;a href=&quot;https://rawgithub.com/jhw/react-samples/master/html/toggle.html&quot;&gt;#1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;React Chosen Wrapper&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/chenglou&quot;&gt;Cheng Lou&lt;/a&gt; wrote a wrapper for the &lt;a href=&quot;http://harvesthq.github.io/chosen/&quot;&gt;Chosen&lt;/a&gt; input library called &lt;a href=&quot;https://github.com/chenglou/react-chosen&quot;&gt;react-chosen&lt;/a&gt;. It took just 25 lines to be able to use jQuery component as a React one.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;renderComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Chosen&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;noResultsText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;No result&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Harvest&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onChange&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Facebook&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Facebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/option&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Harvest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Harvest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/option&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/Chosen&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;JSX and ES6 Template Strings&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://domenicdenicola.com/&quot;&gt;Domenic Denicola&lt;/a&gt; wrote a slide deck about the great applications of ES6 features and one slide shows how we could use Template Strings to compile JSX at run-time without the need for a pre-processing phase.&lt;/p&gt;
+
+&lt;figure&gt;&lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/24187146?rel=0&amp;startSlide=36&quot; width=&quot;600&quot; height=&quot;356&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt; &lt;/iframe&gt;&lt;/figure&gt;
+
+&lt;h2&gt;React Presentation&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tomocchino.com/&quot;&gt;Tom Occhino&lt;/a&gt; and &lt;a href=&quot;https://github.com/jordwalke&quot;&gt;Jordan Walke&lt;/a&gt;, React developers, did a presentation of React at Facebook Seattle&amp;#39;s office. Check out the first 25 minutes for the presentation and the remaining 45 for a Q&amp;amp;A. I highly recommend you watching this video.&lt;/p&gt;
+
+&lt;figure&gt;&lt;iframe width=&quot;650&quot; height=&quot;400&quot; src=&quot;//www.youtube.com/embed/XxVg_s8xAms&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/figure&gt;
+
+&lt;h2&gt;Docs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.petehunt.net/&quot;&gt;Pete Hunt&lt;/a&gt; rewrote the entirety of the docs for v0.4. The goal was to add more explanation about why we built React and what the best practices are.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Guides&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/why-react.html&quot;&gt;Why React?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/displaying-data.html&quot;&gt;Displaying Data&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/jsx-in-depth.html&quot;&gt;JSX in Depth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/jsx-gotchas.html&quot;&gt;JSX Gotchas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/interactivity-and-dynamic-uis.html&quot;&gt;Interactivity and Dynamic UIs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/multiple-components.html&quot;&gt;Multiple Components&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/reusable-components.html&quot;&gt;Reusable Components&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/forms.html&quot;&gt;Forms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/working-with-the-browser.html&quot;&gt;Working With the Browser&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/more-about-refs.html&quot;&gt;More About Refs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/tooling-integration.html&quot;&gt;Tooling integration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/react/docs/reference.html&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+				<pubDate>2013-07-23T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/07/23/community-roundup-5.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/07/23/community-roundup-5.html</guid>
+			</item>
+		
+			<item>
+				<title>React v0.4.0</title>
+				<description>&lt;p&gt;Over the past 2 months we&amp;#39;ve been taking feedback and working hard to make React even better. We fixed some bugs, made some under-the-hood improvements, and added several features that we think will improve the experience developing with React. Today we&amp;#39;re proud to announce the availability of React v0.4!&lt;/p&gt;
+
+&lt;p&gt;This release could not have happened without the support of our growing community. Since launch day, the community has contributed blog posts, questions to the &lt;a href=&quot;http://groups.google.com/group/reactjs&quot;&gt;Google Group&lt;/a&gt;, and issues and pull requests on GitHub. We&amp;#39;ve had contributions ranging from documentation improvements to major changes to React&amp;#39;s rendering. We&amp;#39;ve seen people integrate React into the tools they&amp;#39;re using and the products they&amp;#39;re building, and we&amp;#39;re all very excited to see what our budding community builds next!&lt;/p&gt;
+
+&lt;p&gt;React v0.4 has some big changes. We&amp;#39;ve also restructured the documentation to better communicate how to use React. We&amp;#39;ve summarized the changes below and linked to documentation where we think it will be especially useful.&lt;/p&gt;
+
+&lt;p&gt;When you&amp;#39;re ready, &lt;a href=&quot;/react/downloads.html&quot;&gt;go download it&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3&gt;React&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Switch from using &lt;code&gt;id&lt;/code&gt; attribute to &lt;code&gt;data-reactid&lt;/code&gt; to track DOM nodes. This allows you to integrate with other JS and CSS libraries more easily.&lt;/li&gt;
+&lt;li&gt;Support for more DOM elements and attributes (e.g., &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Improved server-side rendering APIs. &lt;code&gt;React.renderComponentToString(&amp;lt;component&amp;gt;, callback)&lt;/code&gt; allows you to use React on the server and generate markup which can be sent down to the browser.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;prop&lt;/code&gt; improvements: validation and default values. &lt;a href=&quot;http://facebook.github.io/react/blog/2013/07/11/react-v0-4-prop-validation-and-default-values.html&quot;&gt;Read our blog post for details...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support for the &lt;code&gt;key&lt;/code&gt; prop, which allows for finer control over reconciliation. &lt;a href=&quot;http://facebook.github.io/react/docs/multiple-components.html&quot;&gt;Read the docs for details...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Removed &lt;code&gt;React.autoBind&lt;/code&gt;. &lt;a href=&quot;http://facebook.github.io/react/blog/2013/07/02/react-v0-4-autobind-by-default.html&quot;&gt;Read our blog post for details...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improvements to forms. We&amp;#39;ve written wrappers around &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;option&amp;gt;&lt;/code&gt;, and &lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt; in order to standardize many inconsistencies in browser implementations. This includes support for &lt;code&gt;defaultValue&lt;/code&gt;, and improved implementation of the &lt;code&gt;onChange&lt;/code&gt; event, and circuit completion. &lt;a href=&quot;http://facebook.github.io/react/docs/forms.html&quot;&gt;Read the docs for details...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;We&amp;#39;ve implemented an improved synthetic event system that conforms to the W3C spec.&lt;/li&gt;
+&lt;li&gt;Updates to your component are batched now, which may result in a significantly faster re-render of components. &lt;code&gt;this.setState&lt;/code&gt; now takes an optional callback as it&amp;#39;s second parameter. If you were using &lt;code&gt;onClick={this.setState.bind(this, state)}&lt;/code&gt; previously, you&amp;#39;ll want to make sure you add a third parameter so that the event is not treated as the callback.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;JSX&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Support for comment nodes &lt;code&gt;&amp;lt;div&amp;gt;{/* this is a comment and won&amp;#39;t be rendered */}&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Children are now transformed directly into arguments instead of being wrapped in an array
+E.g. &lt;code&gt;&amp;lt;div&amp;gt;&amp;lt;Component1/&amp;gt;&amp;lt;Component2/&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt; is transformed into &lt;code&gt;React.DOM.div(null, Component1(null), Component2(null))&lt;/code&gt;.
+Previously this would be transformed into &lt;code&gt;React.DOM.div(null, [Component1(null), Component2(null)])&lt;/code&gt;.
+If you were using React without JSX previously, your code should still work.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;react-tools&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed a number of bugs when transforming directories&lt;/li&gt;
+&lt;li&gt;No longer re-write &lt;code&gt;require()&lt;/code&gt;s to be relative unless specified&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>2013-07-17T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/07/17/react-v0-4-0.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/07/17/react-v0-4-0.html</guid>
+			</item>
+		
+			<item>
+				<title>New in React v0.4: Prop Validation and Default Values</title>
+				<description>&lt;p&gt;Many of the questions we got following the public launch of React revolved around &lt;code&gt;props&lt;/code&gt;, specifically that people wanted to do validation and to make sure their components had sensible defaults.&lt;/p&gt;
+
+&lt;h2&gt;Validation&lt;/h2&gt;
+
+&lt;p&gt;Oftentimes you want to validate your &lt;code&gt;props&lt;/code&gt; before you use them. Perhaps you want to ensure they are a specific type. Or maybe you want to restrict your prop to specific values. Or maybe you want to make a specific prop required. This was always possible — you could have written validations in your &lt;code&gt;render&lt;/code&gt; or &lt;code&gt;componentWillReceiveProps&lt;/code&gt; functions, but that gets clunky fast.&lt;/p&gt;
+
+&lt;p&gt;React v0.4 will provide a nice easy way for you to use built-in validators, or to even write your own.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;propTypes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// An optional string prop named &amp;quot;description&amp;quot;.&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PropTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// A required enum prop named &amp;quot;category&amp;quot;.&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PropTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oneOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;News&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Photos&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isRequired&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// A prop named &amp;quot;dialog&amp;quot; that requires an instance of Dialog.&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;dialog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PropTypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;instanceOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Dialog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isRequired&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Default Values&lt;/h2&gt;
+
+&lt;p&gt;One common pattern we&amp;#39;ve seen with our React code is to do something like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;default value&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do this for a few &lt;code&gt;props&lt;/code&gt; across a few components and now you have a lot of redundant code. Starting with React v0.4, you can provide default values in a declarative way:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;getDefaultProps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;default value&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We will use the cached result of this function before each &lt;code&gt;render&lt;/code&gt;. We also perform all validations before each &lt;code&gt;render&lt;/code&gt; to ensure that you have all of the data you need in the right form before you try to use it.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Both of these features are entirely optional. We&amp;#39;ve found them to be increasingly valuable at Facebook as our applications grow and evolve, and we hope others find them useful as well.&lt;/p&gt;
+</description>
+				<pubDate>2013-07-11T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/07/11/react-v0-4-prop-validation-and-default-values.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/07/11/react-v0-4-prop-validation-and-default-values.html</guid>
+			</item>
+		
+			<item>
+				<title>Community Round-up #4</title>
+				<description>&lt;p&gt;React reconciliation process appears to be very well suited to implement a text editor with a live preview as people at Khan Academy show us.&lt;/p&gt;
+
+&lt;h2&gt;Khan Academy&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bjk5.com/&quot;&gt;Ben Kamens&lt;/a&gt; explains how &lt;a href=&quot;http://benalpert.com/&quot;&gt;Ben Alpert&lt;/a&gt; and &lt;a href=&quot;http://joelburget.com/&quot;&gt;Joel Burget&lt;/a&gt; are promoting React inside of &lt;a href=&quot;https://www.khanacademy.org/&quot;&gt;Khan Academy&lt;/a&gt;. They now have three projects in the works using React.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Recently two Khan Academy devs dropped into our team chat and said they were gonna use React to write a new feature. They even hinted that we may want to adopt it product-wide.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;The library is only a week old. It&amp;#39;s a brand new way of thinking about things. We&amp;#39;re the first to use it outside of Facebook. Heck, even the React devs were surprised to hear we&amp;#39;re using this in production!!!&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bjk5.com/post/53742233351/getting-your-team-to-adopt-new-technology&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The best part is the demo of how React reconciliation process makes live editing more user-friendly.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Our renderer, post-React, is on the left. A typical math editor&amp;#39;s preview is on the right.
+&lt;figure&gt;&lt;a href=&quot;http://bjk5.com/post/53742233351/getting-your-team-to-adopt-new-technology&quot;&gt;&lt;img src=&quot;/react/img/blog/monkeys.gif&quot; width=&quot;70%&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;React Snippets&lt;/h2&gt;
+
+&lt;p&gt;Over the past several weeks, members of our team, &lt;a href=&quot;http://www.petehunt.net/&quot;&gt;Pete Hunt&lt;/a&gt; and &lt;a href=&quot;http://zpao.com/&quot;&gt;Paul O&amp;#39;Shannessy&lt;/a&gt;, answered many questions that were asked in the &lt;a href=&quot;https://groups.google.com/forum/#!forum/reactjs&quot;&gt;React group&lt;/a&gt;. They give a good overview of how to integrate React with other libraries and APIs through the use of &lt;a href=&quot;/react/docs/mixins.html&quot;&gt;Mixins&lt;/a&gt; and &lt;a href=&quot;/react/docs/advanced-components.html&quot;&gt;Lifecycle Methods&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!topic/reactjs/l6PnP8qbofk&quot;&gt;Listening Scroll Event&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/aabeL/1/&quot;&gt;JSFiddle&lt;/a&gt;: Basically I&amp;#39;ve given you two mixins. The first lets you react to global scroll events. The second is, IMO, much more useful: it gives you scroll start and scroll end events, which you can use with setState() to create components that react based on whether the user is scrolling or not.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!topic/reactjs/RVAY_eQmdpo&quot;&gt;Fade-in Transition&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/ufe8k/1/&quot;&gt;JSFiddle&lt;/a&gt;: Creating a new &lt;code&gt;&amp;lt;FadeInWhenAdded&amp;gt;&lt;/code&gt; component and using jQuery &lt;code&gt;.fadeIn()&lt;/code&gt; function on the DOM node.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/R8f5L/5/&quot;&gt;JSFiddle&lt;/a&gt;: Using CSS transition instead.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!topic/reactjs/pyUZBRWcHB4&quot;&gt;Socket.IO Integration&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/zpao/5686416&quot;&gt;Gist&lt;/a&gt;: The big thing to notice is that my component is pretty dumb (it doesn&amp;#39;t have to be but that&amp;#39;s how I chose to model it). All it does is render itself based on the props that are passed in. renderOrUpdate is where the &amp;quot;magic&amp;quot; happens.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/petehunt/5687230&quot;&gt;Gist&lt;/a&gt;: This example is doing everything -- including the IO -- inside of a single React component.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/petehunt/5687276&quot;&gt;Gist&lt;/a&gt;: One pattern that we use at Instagram a lot is to employ separation of concerns and consolidate I/O and state into components higher in the hierarchy to keep the rest of the components mostly stateless and purely display.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!topic/reactjs/mHfBGI3Qwz4&quot;&gt;Sortable jQuery Plugin Integration&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/LQxy7/&quot;&gt;JSFiddle&lt;/a&gt;: Your React component simply render empty divs, and then in componentDidMount() you call React.renderComponent() on each of those divs to set up a new root React tree. Be sure to explicitly unmountAndReleaseReactRootNode() for each component in componentWillUnmount().&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Introduction to React Screencast&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.petehunt.net/&quot;&gt;Pete Hunt&lt;/a&gt; recorded himself implementing a simple &lt;code&gt;&amp;lt;Blink&amp;gt;&lt;/code&gt; tag in React.&lt;/p&gt;
+
+&lt;figure&gt;&lt;iframe src=&quot;http://player.vimeo.com/video/67248575&quot; width=&quot;500&quot; height=&quot;340&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;&lt;/figure&gt;
+
+&lt;h2&gt;Snake in React&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tomocchino.com/&quot;&gt;Tom Occhino&lt;/a&gt; implemented Snake in 150 lines with React.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tomocchino/react-snake/blob/master/src/snake.js&quot;&gt;Check the source on Github&lt;/a&gt;
+&lt;figure&gt;&lt;a href=&quot;http://tomocchino.github.io/react-snake/&quot;&gt;&lt;img src=&quot;/react/img/blog/snake.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+				<pubDate>2013-07-03T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/07/03/community-roundup-4.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/07/03/community-roundup-4.html</guid>
+			</item>
+		
+			<item>
+				<title>New in React v0.4: Autobind by Default</title>
+				<description>&lt;p&gt;React v0.4 is very close to completion. As we finish it off, we&amp;#39;d like to share with you some of the major changes we&amp;#39;ve made since v0.3. This is the first of several posts we&amp;#39;ll be making over the next week.&lt;/p&gt;
+
+&lt;h2&gt;What is React.autoBind?&lt;/h2&gt;
+
+&lt;p&gt;If you take a look at most of our current examples, you&amp;#39;ll see us using &lt;code&gt;React.autoBind&lt;/code&gt; for event handlers. This is used in place of &lt;code&gt;Function.prototype.bind&lt;/code&gt;. Remember that in JS, &lt;a href=&quot;http://bonsaiden.github.io/JavaScript-Garden/#function.this&quot;&gt;function calls are late-bound&lt;/a&gt;. That means that if you simply pass a function around, the &lt;code&gt;this&lt;/code&gt; used inside won&amp;#39;t necessarily be the &lt;code&gt;this&lt;/code&gt; you expect. &lt;code&gt;Function.prototype.bind&lt;/code&gt; creates a new, properly bound, function so that when called, &lt;code&gt;this&lt;/code&gt; is exactly what you expect it to be.&lt;/p&gt;
+
+&lt;p&gt;Before we launched React, we would write this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* do something with this */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;hll&quot;&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We wrote &lt;code&gt;React.autoBind&lt;/code&gt; as a way to cache the function creation and save on memory usage. Since &lt;code&gt;render&lt;/code&gt; can get called multiple times, if you used &lt;code&gt;this.onClick.bind(this)&lt;/code&gt; you would actually create a new function on each pass. With React v0.3 you were able to write this instead:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;hll&quot;&gt;  &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;autoBind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* do something with this */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
+&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;hll&quot;&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;What&amp;#39;s Changing in v0.4?&lt;/h2&gt;
+
+&lt;p&gt;After using &lt;code&gt;React.autoBind&lt;/code&gt; for a few weeks, we realized that there were very few times that we didn&amp;#39;t want that behavior. So we made it the default! Now all methods defined within &lt;code&gt;React.createClass&lt;/code&gt; will already be bound to the correct instance.&lt;/p&gt;
+
+&lt;p&gt;Starting with v0.4 you can just write this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;hll&quot;&gt;  &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* do something with this */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;hll&quot;&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For v0.4 we will simply be making &lt;code&gt;React.autoBind&lt;/code&gt; a no-op — it will just return the function you pass to it. Most likely you won&amp;#39;t have to change your code to account for this change, though we encourage you to update. We&amp;#39;ll publish a migration guide documenting this and other changes that come along with React v0.4.&lt;/p&gt;
+</description>
+				<pubDate>2013-07-02T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/07/02/react-v0-4-autobind-by-default.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/07/02/react-v0-4-autobind-by-default.html</guid>
+			</item>
+		
+			<item>
+				<title>Community Round-up #3</title>
+				<description>&lt;p&gt;The highlight of this week is that an interaction-heavy app has been ported to React. React components are solving issues they had with nested views.&lt;/p&gt;
+
+&lt;h2&gt;Moving From Backbone To React&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/clayallsopp&quot;&gt;Clay Allsopp&lt;/a&gt; successfully ported &lt;a href=&quot;http://usepropeller.com/blog/posts/from-backbone-to-react/&quot;&gt;Propeller&lt;/a&gt;, a fairly big, interaction-heavy JavaScript app, to React.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://usepropeller.com/blog/posts/from-backbone-to-react/&quot;&gt;&lt;img style=&quot;float: right; margin: 0 0 10px 10px;&quot; src=&quot;/react/img/blog/propeller-logo.png&quot; /&gt;&lt;/a&gt;Subviews involve a lot of easy-to-forget boilerplate that Backbone (by design) doesn&amp;#39;t automate. Libraries like Backbone.Marionette offer more abstractions to make view nesting easier, but they&amp;#39;re all limited by the fact that Backbone delegates how and went view-document attachment occurs to the application code.&lt;/p&gt;
+
+&lt;p&gt;React, on the other hand, manages the DOM and only exposes real nodes at select points in its API. The &amp;quot;elements&amp;quot; you code in React are actually objects which wrap DOM nodes, not the actual objects which get inserted into the DOM. Internally, React converts those abstractions into actual DOMElements and fills out the document accordingly. [...]&lt;/p&gt;
+
+&lt;p&gt;We moved about 20 different Backbone view classes to React over the past few weeks, including the live-preview pane that you see in our little iOS demo. Most importantly, it&amp;#39;s allowed us to put energy into making each component work great on its own, instead of spending extra cycles to ensure they function in unison. For that reason, we think React is a more scalable way to build view-intensive apps than Backbone alone, and it doesn&amp;#39;t require you to drop-everything-and-refactor like a move to Ember or Angular would demand.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://usepropeller.com/blog/posts/from-backbone-to-react/&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Grunt Task for JSX&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ericclemmons.github.io/&quot;&gt;Eric Clemmons&lt;/a&gt; wrote a task for &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; that applies the JSX transformation to your Javascript files. It also works with &lt;a href=&quot;http://browserify.org/&quot;&gt;Browserify&lt;/a&gt; if you want all your files to be concatenated and minified together.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Grunt task for compiling Facebook React&amp;#39;s .jsx templates into .js&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;extension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;js&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;path/to/output/dir&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;path/to/jsx/templates/dir&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It also works great with &lt;code&gt;grunt-browserify&lt;/code&gt;!&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;browserify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;grunt-react&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;browserify&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;path/to/source/main.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;path/to/target/output.js&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ericclemmons/grunt-react&quot;&gt;Check out the project ...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Backbone/Handlebars Nested Views&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://joelburget.com/&quot;&gt;Joel Burget&lt;/a&gt; wrote a blog post talking about the way we would write React-like components in Backbone and Handlebars.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The problem here is that we&amp;#39;re trying to maniplate a tree, but there&amp;#39;s a textual layer we have to go through. Our views are represented as a tree - the subviews are children of CommentCollectionView - and they end up as part of a tree in the DOM. But there&amp;#39;s a Handlebars layer in the middle (which deals in flat strings), so the hierarchy must be destructed and rebuilt when we render.&lt;/p&gt;
+
+&lt;p&gt;What does it take to render a collection view? In the Backbone/Handlebars view of the world you have to render the template (with stubs), render each subview which replaces a stub, and keep a reference to each subview (or anything within the view that could change in the future).&lt;/p&gt;
+
+&lt;p&gt;So while our view is conceptually hierarchical, due to the fact that it has to go through a flat textual representation, we need to do a lot of extra work to reassemble that structure after rendering.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://joelburget.com/react/&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;JSRomandie Meetup&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/renajohn/&quot;&gt;Renault John Lecoultre&lt;/a&gt; from &lt;a href=&quot;http://www.bugbuster.com&quot;&gt;BugBuster&lt;/a&gt; did a React introduction talk at a JS meetup called &lt;a href=&quot;https://twitter.com/jsromandie&quot;&gt;JS Romandie&lt;/a&gt; last week.&lt;/p&gt;
+
+&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;888a9d50c01b01300df36658d0894ac1&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2&gt;CoffeeScript integration&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.vjeux.com/&quot;&gt;Vjeux&lt;/a&gt; used the fact that JSX is just a syntactic sugar on-top of regular JS to rewrite the React front-page examples in CoffeeScript.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Multiple people asked what&amp;#39;s the story about JSX and CoffeeScript. There is no JSX pre-processor for CoffeeScript and I&amp;#39;m not aware of anyone working on it. Fortunately, CoffeeScript is pretty expressive and we can play around the syntax to come up with something that is usable.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;textarea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DOM&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;MarkdownEditor&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Input&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textarea&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onKeyUp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleKeyUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;textarea&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.vjeux.com/2013/javascript/react-coffeescript.html&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Tutorial in Plain Javascript&lt;/h2&gt;
+
+&lt;p&gt;We&amp;#39;ve seen a lot of people comparing React with various frameworks. &lt;a href=&quot;http://ricardo.cc/&quot;&gt;Ricardo Tomasi&lt;/a&gt; decided to re-implement the tutorial without any framework, just plain Javascript.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Facebook &amp;amp; Instagram launched the React framework and an accompanying tutorial. Developer Vlad Yazhbin decided to rewrite that using AngularJS. The end result is pretty neat, but if you&amp;#39;re like me you will not actually appreciate the HTML speaking for itself and doing all the hard work. So let&amp;#39;s see what that looks like in plain javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ricardo.cc/2013/06/07/react-tutorial-rewritten-in-plain-javascript.html&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+				<pubDate>2013-06-27T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/06/27/community-roundup-3.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/06/27/community-roundup-3.html</guid>
+			</item>
+		
+			<item>
+				<title>React v0.3.3</title>
+				<description>&lt;p&gt;We have a ton of great stuff coming in v0.4, but in the meantime we&amp;#39;re releasing v0.3.3. This release addresses some small issues people were having and simplifies our tools to make them easier to use.&lt;/p&gt;
+
+&lt;h2&gt;react-tools&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Upgrade Commoner so &lt;code&gt;require&lt;/code&gt; statements are no longer relativized when passing through the transformer. This was a feature needed when building React, but doesn&amp;#39;t translate well for other consumers of &lt;code&gt;bin/jsx&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Upgraded our dependencies on Commoner and Recast so they use a different directory for their cache.&lt;/li&gt;
+&lt;li&gt;Freeze our esprima dependency.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;React&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Allow reusing the same DOM node to render different components. e.g. &lt;code&gt;React.renderComponent(&amp;lt;div/&amp;gt;, domNode); React.renderComponent(&amp;lt;span/&amp;gt;, domNode);&lt;/code&gt; will work now.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;JSXTransformer&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improved the in-browser transformer so that transformed scripts will execute in the expected scope. The allows components to be defined and used from separate files.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>2013-06-21T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/06/21/react-v0-3-3.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/06/21/react-v0-3-3.html</guid>
+			</item>
+		
+			<item>
+				<title>Community Round-up #2</title>
+				<description>&lt;p&gt;Since the launch we have received a lot of feedback and are actively working on React 0.4. In the meantime, here are the highlights of this week.&lt;/p&gt;
+
+&lt;h2&gt;Some quick thoughts on React&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.andrewgreig.com/&quot;&gt;Andrew Greig&lt;/a&gt; made a blog post that gives a high level description of what React is.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I have been using Facebooks recently released Javascript framework called React.js for the last few days and have managed to obtain a rather high level understanding of how it works and formed a good perspective on how it fits in to the entire javascript framework ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Basically, React is not an MVC framework. It is not a replacement for Backbone or Knockout or Angular, instead it is designed to work with existing frameworks and help extend their functionality.&lt;/p&gt;
+
+&lt;p&gt;It is designed for building big UIs. The type where you have lots of reusable components that are handling events and presenting and changing some backend data. In a traditional MVC app, React fulfils the role of the View. So you would still need to handle the Model and Controller on your own.&lt;/p&gt;
+
+&lt;p&gt;I found the best way to utilise React was to pair it with Backbone, with React replacing the Backbone View, or to write your own Model/Data object and have React communicate with that.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.andrewgreig.com/637/&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;React and Socket.IO Chat Application&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://danialk.github.io/&quot;&gt;Danial Khosravi&lt;/a&gt; made a real-time chat application that interacts with the back-end using Socket.IO.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A week ago I was playing with AngularJS and &lt;a href=&quot;https://github.com/btford/angular-socket-io-im&quot;&gt;this little chat application&lt;/a&gt; which uses socket.io and nodejs for realtime communication. Yesterday I saw a post about ReactJS in &lt;a href=&quot;http://www.echojs.com/&quot;&gt;EchoJS&lt;/a&gt; and started playing with this UI library. After playing a bit with React, I decided to write and chat application using React and I used Bran Ford&amp;#39;s Backend for server side of this little app.
+&lt;figure&gt;&lt;a href=&quot;http://danialk.github.io/blog/2013/06/16/reactjs-and-socket-dot-io-chat-application/&quot;&gt;&lt;img src=&quot;/react/img/blog/chatapp.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://danialk.github.io/blog/2013/06/16/reactjs-and-socket-dot-io-chat-application/&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;React and Other Frameworks&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.petehunt.net/blog/&quot;&gt;Pete Hunt&lt;/a&gt; wrote an answer on Quora comparing React and Angular directives. At the end, he explains how you can make an Angular directive that is in fact being rendered with React.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;To set the record straight: React components are far more powerful than Angular templates; they should be compared with Angular&amp;#39;s directives instead. So I took the first Google hit for &amp;quot;AngularJS directive tutorial&amp;quot; (AngularJS Directives Tutorial - Fundoo Solutions), rewrote it in React and compared them. [...]&lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;ve designed React from the beginning to work well with other libraries. Angular is no exception. Let&amp;#39;s take the original Angular example and use React to implement the fundoo-rating directive.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.quora.com/Pete-Hunt/Posts/Facebooks-React-vs-AngularJS-A-Closer-Look&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In the same vein, &lt;a href=&quot;https://twitter.com/markov_twain/status/345702941845499906&quot;&gt;Markov Twain&lt;/a&gt; re-implemented the examples on the front-page &lt;a href=&quot;http://jsbin.com/azihiw/2/edit&quot;&gt;with Ember&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/vla&quot;&gt;Vlad Yazhbin&lt;/a&gt; re-implemented the tutorial &lt;a href=&quot;http://jsfiddle.net/vla/Cdrse/&quot;&gt;with Angular&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Web Components: React &amp;amp; x-tags&lt;/h2&gt;
+
+&lt;p&gt;Mozilla and Google are actively working on Web Components. &lt;a href=&quot;http://blog.vjeux.com/&quot;&gt;Vjeux&lt;/a&gt; wrote a proof of concept that shows how to implement them using React.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Using &lt;a href=&quot;http://www.x-tags.org/&quot;&gt;x-tags&lt;/a&gt; from Mozilla, we can write custom tags within the DOM. This is a great opportunity to be able to write reusable components without being tied to a particular library. I wrote &lt;a href=&quot;https://github.com/vjeux/react-xtags/&quot;&gt;x-react&lt;/a&gt; to have them being rendered in React.
+&lt;figure&gt;&lt;a href=&quot;http://blog.vjeux.com/2013/javascript/custom-components-react-x-tags.html&quot;&gt;&lt;img src=&quot;/react/img/blog/xreact.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.vjeux.com/2013/javascript/custom-components-react-x-tags.html&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;React TodoMVC Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://todomvc.com/&quot;&gt;TodoMVC.com&lt;/a&gt; is a website that collects various implementations of the same basic Todo app. &lt;a href=&quot;http://www.petehunt.net/blog/&quot;&gt;Pete Hunt&lt;/a&gt; wrote an idiomatic React version.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Developers these days are spoiled with choice when it comes to selecting an MV* framework for structuring and organizing their JavaScript web apps.&lt;/p&gt;
+
+&lt;p&gt;To help solve this problem, we created TodoMVC - a project which offers the same Todo application implemented using MV* concepts in most of the popular JavaScript MV* frameworks of today.
+&lt;figure&gt;&lt;a href=&quot;http://todomvc.com/labs/architecture-examples/react/&quot;&gt;&lt;img src=&quot;/react/img/blog/todomvc.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tastejs/todomvc/tree/gh-pages/labs/architecture-examples/react&quot;&gt;Read the source code...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;JSX is not HTML&lt;/h2&gt;
+
+&lt;p&gt;Many of you pointed out differences between JSX and HTML. In order to clear up some confusion, we have added some documentation that covers the four main differences:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://facebook.github.io/react/docs/jsx-is-not-html.html&quot;&gt;Whitespace removal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://facebook.github.io/react/docs/jsx-is-not-html.html&quot;&gt;HTML Entities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://facebook.github.io/react/docs/jsx-is-not-html.html&quot;&gt;Comments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://facebook.github.io/react/docs/jsx-is-not-html.html&quot;&gt;Custom HTML Attributes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>2013-06-19T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/06/19/community-roundup-2.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/06/19/community-roundup-2.html</guid>
+			</item>
+		
+			<item>
+				<title>Community Round-up #1</title>
+				<description>&lt;p&gt;React was open sourced two weeks ago and it&amp;#39;s time for a little round-up of what has been going on.&lt;/p&gt;
+
+&lt;h2&gt;Khan Academy Question Editor&lt;/h2&gt;
+
+&lt;p&gt;It looks like &lt;a href=&quot;http://benalpert.com/&quot;&gt;Ben Alpert&lt;/a&gt; is the first person outside of Facebook and Instagram to push React code to production. We are very grateful for his contributions in form of pull requests, bug reports and presence on IRC (&lt;a href=&quot;irc://chat.freenode.net/reactjs&quot;&gt;#reactjs on Freenode&lt;/a&gt;). Ben wrote about his experience using React:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I just rewrote a 2000-line project in React and have now made a handful of pull requests to React. Everything about React I&amp;#39;ve seen so far seems really well thought-out and I&amp;#39;m proud to be the first non-FB/IG production user of React.&lt;/p&gt;
+
+&lt;p&gt;The project that I rewrote in React (and am continuing to improve) is the Khan Academy question editor which content creators can use to enter questions and hints that will be presented to students:
+&lt;figure&gt;&lt;a href=&quot;http://benalpert.com/2013/06/09/using-react-to-speed-up-khan-academy.html&quot;&gt;&lt;img src=&quot;/react/img/blog/khan-academy-editor.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://benalpert.com/2013/06/09/using-react-to-speed-up-khan-academy.html&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Pimp my Backbone.View (by replacing it with React)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.mayflower.de/&quot;&gt;Paul Seiffert&lt;/a&gt; wrote a blog post that explains how to integrate React into Backbone applications.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;React has some interesting concepts for JavaScript view objects that can be used to eliminate this one big problem I have with Backbone.js.&lt;/p&gt;
+
+&lt;p&gt;As in most MVC implementations (although React is probably just a VC implementation), a view is one portion of the screen that is managed by a controlling object. This object is responsible for deciding when to re-render the view and how to react to user input. With React, these view-controllers objects are called components. A component knows how to render its view and how to handle to the user&amp;#39;s interaction with it.&lt;/p&gt;
+
+&lt;p&gt;The interesting thing is that React is figuring out by itself when to re-render a view and how to do this in the most efficient way.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.mayflower.de/3937-Backbone-React.html&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Using facebook&amp;#39;s React with require.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.xenji.com/&quot;&gt;Mario Mueller&lt;/a&gt; wrote a menu component in React and was able to easily integrate it with require.js, EventEmitter2 and bower.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I recently stumbled upon facebook&amp;#39;s React library, which is a Javascript library for building reusable frontend components. Even if this lib is only at version 0.3.x it behaves very stable, it is fast and is fun to code. I&amp;#39;m a big fan of require.js, so I tried to use React within the require.js eco system. It was not as hard as expected and here are some examples and some thoughts about it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.xenji.com/2013/06/facebooks-react-require-js.html&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Origins of React&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.petehunt.net/blog/&quot;&gt;Pete Hunt&lt;/a&gt; explained what differentiates React from other JavaScript libraries in &lt;a href=&quot;http://facebook.github.io/react/blog/2013/06/05/why-react.html&quot;&gt;a previous blog post&lt;/a&gt;. &lt;a href=&quot;http://leebyron.com/&quot;&gt;Lee Byron&lt;/a&gt; gives another perspective on Quora:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;React isn&amp;#39;t quite like any other popular Javascript libraries, and it solves a very specific problem: complex UI rendering. It&amp;#39;s also intended to be used along side many other popular libraries. For example, React works well with Backbone.js, amongst many others.&lt;/p&gt;
+
+&lt;p&gt;React was born out of frustrations with the common pattern of writing two-way data bindings in complex MVC apps. React is an implementation of one-way data bindings.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.quora.com/React-JS-Library/How-is-Facebooks-React-JavaScript-library/answer/Lee-Byron?srid=3DcX&quot;&gt;Read the full post...&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+				<pubDate>2013-06-12T00:00:00-07:00</pubDate>
+				<link>http://facebook.github.io/react/blog/2013/06/12/community-roundup.html</link>
+				<guid isPermaLink="true">http://facebook.github.io/react/blog/2013/06/12/community-roundup.html</guid>
+			</item>
+		
+	</channel>
+</rss>

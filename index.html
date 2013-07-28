@@ -1,60 +1,180 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>React | A JavaScript library for building user interfaces</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="React | A JavaScript library for building user interfaces" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://facebook.github.io/react/index.html" />
+  <meta property="og:image" content="http://facebook.github.io/react/img/logo_og.png" />
+  <meta property="og:description" content="A JavaScript library for building user interfaces" />
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="React : React is a JavaScript library for building user interfaces." />
+  <link rel="shortcut icon" href="/react/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="React" href="http://facebook.github.io/react/feed.xml">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <link rel="stylesheet" href="/react/css/react.css">
+  <link rel="stylesheet" href="/react/css/syntax.css">
+  <link rel="stylesheet" href="/react/css/codemirror.css">
 
-    <title>React</title>
-  </head>
+  <script type="text/javascript" src="//use.typekit.net/vqa1hcx.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-  <body>
+  <script type="text/javascript" src="/react/js/codemirror.js"></script>
+  <script type="text/javascript" src="/react/js/javascript.js"></script>
+  <script type="text/javascript" src="/react/js/react.min.js"></script>
+  <script type="text/javascript" src="/react/js/JSXTransformer.js"></script>
+  <script type="text/javascript" src="/react/js/live_editor.js"></script>
+  <script type="text/javascript" src="/react/js/showdown.js"></script>
+</head>
+<body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Pirob/react">View on GitHub</a>
+  <div class="container">
 
-          <h1 id="project_title">React</h1>
-          <h2 id="project_tagline">React is a JavaScript library for building user interfaces.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Pirob/react/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Pirob/react/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    <div class="nav-main">
+      <div class="wrap">
+        <a class="nav-home" href="/react/index.html">
+          <img class="nav-logo" alt="" src="/react/img/logo_small.png" width="38" height="38">
+          React
+        </a>
+        <ul class="nav-site">
+          <li><a href="/react/docs/getting-started.html">docs</a></li>
+          <li><a href="/react/support.html">support</a></li>
+          <li><a href="/react/downloads.html">download</a></li>
+          <li><a href="/react/blog/">blog</a></li>
+          <li><a href="http://github.com/facebook/react">github</a>
+        </ul>
+        <!-- <iframe src="http://ghbtns.com/github&#45;btn.html?user=facebook&#38;repo=react.js&#38;type=fork"allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe> -->
+      </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="reactjs" class="anchor" href="#reactjs"><span class="octicon octicon-link"></span></a>React.js</h1>
-      </section>
+    
+    <div class="hero">
+      <div class="wrap">
+        <div class="text"><strong>React</strong></div>
+        <div class="minitext">
+          A JavaScript library for building user interfaces
+        </div>
+
+        <div class="buttons-unit">
+          <a href="/react/docs/getting-started.html" class="button">Get Started</a>
+          <a href="/react/downloads.html" class="button">Download React v0.4.1</a>
+        </div>
+      </div>
     </div>
+    
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">React maintained by <a href="https://github.com/Pirob">Pirob</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <section class="content wrap">
+  <p><section class="light home-section">
+  <div class="marketing-row">
+    <div class="marketing-col">
+      <h3>Declarative</h3>
+      <p>
+        React uses a declarative paradigm that makes it easier to reason about
+        your application.
+      </p>
     </div>
+    <div class="marketing-col">
+      <h3>Efficient</h3>
+      <p>
+        React computes the minimal set of changes necessary to keep your DOM
+        up-to-date.
+      </p>
+    </div>
+    <div class="marketing-col">
+      <h3>Flexible</h3>
+      <p>
+        React works with the libraries and frameworks that you already know.
+      </p>
+    </div>
+  </div>
+</section>
+<hr class="home-divider" />
+<section class="home-section">
+  <div id="examples">
+    <div class="example">
+      <h3>A Simple Component</h3>
+      <p>
+        React components implement a <code>render()</code> method that takes input data and
+        returns what to display. This example uses an XML-like syntax called
+        JSX. Input data that is passed into the component can be accessed by
+        <code>render()</code> via <code>this.props</code>.<br />
+        <strong>JSX is optional and not required to use React.</strong>
+      </p>
+      <div id="helloExample"></div>
+    </div>
+    <div class="example">
+      <h3>A Stateful Component</h3>
+      <p>
+        In addition to taking input data (accessed via <code>this.props</code>), a
+        component can maintain internal state data (accessed via <code>this.state</code>).
+        When a component&#39;s state data changes, the rendered markup will be
+        updated by re-invoking <code>render()</code>.<br />
+        <strong>This example demonstrates use of React without JSX.</strong>
+      </p>
+      <div id="timerExample"></div>
+    </div>
+    <div class="example">
+      <h3>An Application</h3>
+      <p>
+        Using <code>props</code> and <code>state</code>, we can put together a small Todo application.
+        This example uses <code>state</code> to track the current list of items as well as
+        the text that the user has entered. Although event handlers appear to be
+        rendered inline, they will be collected and implemented using event
+        delegation. 
+      </p>
+      <div id="todoExample"></div>
+    </div>
+    <div class="example">
+      <h3>A Component Using External Plugins</h3>
+      <p>
+        React is flexible and provides hooks that allow you to interface with
+        other libraries and frameworks. This example uses Showdown, an external
+        Markdown library, to convert the textarea&#39;s value in real-time.
+      </p>
+      <div id="markdownExample"></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/examples/hello.js"></script>
+  <script type="text/javascript" src="js/examples/timer.js"></script>
+  <script type="text/javascript" src="js/examples/todo.js"></script>
+  <script type="text/javascript" src="js/examples/markdown.js"></script>
+</section>
+<hr class="home-divider" />
+<section class="home-bottom-section">
+  <div class="buttons-unit">
+    <a href="docs/getting-started.html" class="button">Get Started</a>
+    <a href="downloads.html" class="button">Download React v0.4.1</a>
+  </div>
+</section></p>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-146052-10");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+</section>
 
 
-  </body>
+    <footer class="wrap">
+      <div class="left">A Facebook &amp; Instagram collaboration.</div>
+      <div class="right">&copy; 2013 Facebook Inc.</div>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-41298772-1', 'facebook.github.io');
+    ga('send', 'pageview');
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
 </html>

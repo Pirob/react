@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>React | Getting Started</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="React | Getting Started" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://facebook.github.io/react/docs/getting-started.html" />
+  <meta property="og:image" content="http://facebook.github.io/react/img/logo_og.png" />
+  <meta property="og:description" content="A JavaScript library for building user interfaces" />
+
+  <link rel="shortcut icon" href="/react/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="React" href="http://facebook.github.io/react/feed.xml">
+
+  <link rel="stylesheet" href="/react/css/react.css">
+  <link rel="stylesheet" href="/react/css/syntax.css">
+  <link rel="stylesheet" href="/react/css/codemirror.css">
+
+  <script type="text/javascript" src="//use.typekit.net/vqa1hcx.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <script type="text/javascript" src="/react/js/codemirror.js"></script>
+  <script type="text/javascript" src="/react/js/javascript.js"></script>
+  <script type="text/javascript" src="/react/js/react.min.js"></script>
+  <script type="text/javascript" src="/react/js/JSXTransformer.js"></script>
+  <script type="text/javascript" src="/react/js/live_editor.js"></script>
+  <script type="text/javascript" src="/react/js/showdown.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="nav-main">
+      <div class="wrap">
+        <a class="nav-home" href="/react/index.html">
+          <img class="nav-logo" alt="" src="/react/img/logo_small.png" width="38" height="38">
+          React
+        </a>
+        <ul class="nav-site">
+          <li><a href="/react/docs/getting-started.html" class="active">docs</a></li>
+          <li><a href="/react/support.html">support</a></li>
+          <li><a href="/react/downloads.html">download</a></li>
+          <li><a href="/react/blog/">blog</a></li>
+          <li><a href="http://github.com/facebook/react">github</a>
+        </ul>
+        <!-- <iframe src="http://ghbtns.com/github&#45;btn.html?user=facebook&#38;repo=react.js&#38;type=fork"allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe> -->
+      </div>
+    </div>
+
+    
+
+    <section class="content wrap documentationContent">
+  <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <h3>Quick Start</h3>
+      <ul>
+        
+          <li>
+            <a href="/react/docs/getting-started.html" class="active">
+              Getting Started
+            </a>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/tutorial.html">
+              Tutorial
+            </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>Guides</h3>
+      <ul>
+        
+          <li>
+            <a href="/react/docs/why-react.html">
+              Why React?
+            </a>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/displaying-data.html">
+              Displaying Data
+            </a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="/react/docs/jsx-in-depth.html">
+                      JSX in Depth
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/react/docs/jsx-gotchas.html">
+                      JSX Gotchas
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/interactivity-and-dynamic-uis.html">
+              Interactivity and Dynamic UIs
+            </a>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/multiple-components.html">
+              Multiple Components
+            </a>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/reusable-components.html">
+              Reusable Components
+            </a>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/forms.html">
+              Forms
+            </a>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/working-with-the-browser.html">
+              Working With the Browser
+            </a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="/react/docs/more-about-refs.html">
+                      More About Refs
+                    </a>
+                  </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/tooling-integration.html">
+              Tooling integration
+            </a>
+            
+          </li>
+        
+          <li>
+            <a href="/react/docs/reference.html">
+              Reference
+            </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+
+  <div class="inner-content">
+    <h1>Getting Started</h1>
+    <div class="subHeader"></div>
+    <h2>JSFiddle</h2>
+
+<p>The easiest way to start hacking on React is using the following JSFiddle Hello Worlds</p>
+
+<ul>
+<li><strong><a href="http://jsfiddle.net/vjeux/kb3gN/">React JSFiddle</a></strong></li>
+<li><a href="http://jsfiddle.net/vjeux/VkebS/">React JSFiddle without JSX</a></li>
+</ul>
+
+<h2>Starter Kit</h2>
+
+<p>Download the starter kit to get started.</p>
+
+<div class="buttons-unit downloads">
+  <a href="/react/downloads/react-0.4.1.zip" class="button">
+    Download Starter Kit 0.4.1
+  </a>
+</div>
+
+<p>In the root directory of the starter kit, create a <code>helloworld.html</code> with the following contents.</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/react.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/JSXTransformer.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/jsx&quot;</span><span class="nt">&gt;</span>
+      <span class="cm">/** @jsx React.DOM */</span>
+      <span class="nx">React</span><span class="p">.</span><span class="nx">renderComponent</span><span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!&lt;</span><span class="err">/h1&gt;,</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+      <span class="p">);</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p>The XML syntax inside of JavaScript is called JSX; check out the <a href="syntax.html">JSX syntax</a> to learn more about it. In order to translate it to vanilla JavaScript we use <code>&lt;script type=&quot;text/jsx&quot;&gt;</code> and include <code>JSXTransformer.js</code> to actually perform the transformation in the browser.</p>
+
+<h3>Separate File</h3>
+
+<p>Your React JSX file can live in a separate file. Create the following <code>src/helloworld.js</code>.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="cm">/** @jsx React.DOM */</span>
+<span class="nx">React</span><span class="p">.</span><span class="nx">renderComponent</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">world</span><span class="o">!&lt;</span><span class="err">/h1&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Then reference it from <code>helloworld.html</code>:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/jsx&quot;</span> <span class="na">src=</span><span class="s">&quot;src/helloworld.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h3>Offline Transform</h3>
+
+<p>First install the command-line tools (requires <a href="http://npmjs.org/">npm</a>):</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">npm install -g react-tools
+</code></pre></div>
+<p>Then, translate your <code>src/helloworld.js</code> file to plain JavaScript:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">jsx --watch src/ build/
+</code></pre></div>
+<p>The file <code>build/helloworld.js</code> is autogenerated whenever you make a change.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="cm">/** @jsx React.DOM */</span>
+<span class="nx">React</span><span class="p">.</span><span class="nx">renderComponent</span><span class="p">(</span>
+<span class="hll">  <span class="nx">React</span><span class="p">.</span><span class="nx">DOM</span><span class="p">.</span><span class="nx">h1</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="p">),</span>
+</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementyById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Note:</p>
+
+<p>The comment parser is very strict right now, in order for it to pick up the <code>@jsx</code> modifier, two conditions are required. The <code>@jsx</code> comment block must be the first comment on the file. The comment must start with <code>/**</code> (<code>/*</code> and <code>//</code> will not work). If the parser can&#39;t find the <code>@jsx</code> comment, it will output the file without transforming it.</p>
+</blockquote>
+
+<p>Update your HTML file as below:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello React!<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/react.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="hll">    <span class="c">&lt;!-- No need for JSXTransformer! --&gt;</span>
+</span>  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="hll">    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;build/helloworld.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span>  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<h2>Want CommonJS?</h2>
+
+<p>If you want to use React within a module system, <a href="http://github.com/facebook/react">fork our repo</a>, <code>npm install</code> and run <code>grunt</code>. A nice set of CommonJS modules will be generated. Our <code>jsx</code> build tool can be integrated into most packaging systems (not just CommonJS) quite easily.</p>
+
+<h2>Next Steps</h2>
+
+<p>Check out <a href="tutorial.html">the tutorial</a> and the other examples in the <code>/examples</code> directory to learn more. Good luck, and welcome!</p>
+
+
+    <div class="docs-prevnext">
+      
+      
+        <a class="docs-next" href="/react/docs/tutorial.html">Next &rarr;</a>
+      
+    </div>
+
+    <div class="fb-comments" data-width="650" data-num-posts="10" data-href="http://facebook.github.io/react/docs/getting-started.html"></div>
+  </div>
+</section>
+
+
+    <footer class="wrap">
+      <div class="left">A Facebook &amp; Instagram collaboration.</div>
+      <div class="right">&copy; 2013 Facebook Inc.</div>
+    </footer>
+  </div>
+  <div id="fb-root"></div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-41298772-1', 'facebook.github.io');
+    ga('send', 'pageview');
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+</html>
